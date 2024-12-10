@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: chintupana-coll-571f541f76154643887e90d771efbc6a-depl
+  labels:
+    app: chintupana-coll-571f541f76154643887e90d771efbc6a
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: chintupana-coll-571f541f76154643887e90d771efbc6a
+  template:
+    metadata:
+      labels:
+        app: chintupana-coll-571f541f76154643887e90d771efbc6a
+    spec:
+      containers:
+        - name: chintupana-coll-571f541f76154643887e90d771efbc6a
+          image: 216084506783.dkr.ecr.ap-south-1.amazonaws.com/backstract_apps:chintupana-coll-571f541f76154643887e90d771efbc6a
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 9006
